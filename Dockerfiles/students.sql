@@ -1,4 +1,4 @@
-CREATE TABLE students (
+CREATE OR REPLACE TABLE students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     middle_name VARCHAR(255),
@@ -6,7 +6,7 @@ CREATE TABLE students (
     birth_year YEAR NOT NULL,
     gender ENUM('M', 'F') NOT NULL,
     birth_place VARCHAR(255) NOT NULL,
-    nationality VARCHAR(255) NOT 255,
+    nationality VARCHAR(255) NOT NULL,
     legal_representative1 VARCHAR(255) NOT NULL,
     legal_representative2 VARCHAR(255),
     legal_representative3 VARCHAR(255),
@@ -18,7 +18,7 @@ CREATE TABLE students (
     insert_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE case (
+CREATE OR REPLACE TABLE `case` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     description VARCHAR(500),
@@ -27,5 +27,5 @@ CREATE TABLE case (
     ospod_timestamp TIMESTAMP,
     contact_parents TINYINT(1) DEFAULT 0,
     parents_timestamp TIMESTAMP,
-    FOREIGN KEY (student_id) REFERENCES zaci(id_zaka)
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
 );

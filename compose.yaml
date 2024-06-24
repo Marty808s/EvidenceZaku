@@ -1,7 +1,7 @@
 services:
   # PHP + Apache
   php-apache:
-    container_name: php-apache
+    container_name: php-apache_stud
     build:
       dockerfile: Dockerfiles/PhpApache
     volumes:
@@ -13,7 +13,7 @@ services:
 
   # database
   database:
-    container_name: mysql
+    container_name: mysql_stud
     build:
       dockerfile: Dockerfiles/Database
     environment:
@@ -28,7 +28,7 @@ services:
 
 # správa databáze
   phpmyadmin:
-      container_name: phpmyadmin
+      container_name: phpmyadmin_stud
       image: phpmyadmin/phpmyadmin:latest
       restart: always
       environment:
@@ -41,4 +41,4 @@ services:
         - database
 
 volumes:
-  db_data:
+  db_data: {}
