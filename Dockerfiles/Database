@@ -2,4 +2,4 @@
 FROM mysql
 
 # inicializace databáze
-ADD ./Dockerfiles/students.sql /docker-entrypoint-initdb.d
+COPY ./Dockerfiles/students.sql /docker-entrypoint-initdb.d

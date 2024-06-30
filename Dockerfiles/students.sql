@@ -1,4 +1,10 @@
-CREATE OR REPLACE TABLE students (
+SET NAMES utf8mb4;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS students;
+CREATE TABLE students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     middle_name VARCHAR(255),
@@ -18,7 +24,8 @@ CREATE OR REPLACE TABLE students (
     insert_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE OR REPLACE TABLE `case` (
+DROP TABLE IF EXISTS `case`;
+CREATE TABLE `case` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     description VARCHAR(500),
