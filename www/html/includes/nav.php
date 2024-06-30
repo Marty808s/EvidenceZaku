@@ -9,16 +9,13 @@ require_once __DIR__ . '/../includes/html_base.php';
       <img src="../img/logo.png" alt="" width="30" height="30" class="d-inline-block align-top">
       Evidence žáků
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item m-3 p-2">
+          <a class="nav-link" href="index.php">Kartotéka</a>
         </li>
       </ul>
     </div>
